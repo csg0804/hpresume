@@ -1,0 +1,19 @@
+<com-navbar navData="{{navData}}" ></com-navbar>
+<view class="experience-wrap" style='height: calc(100% - {{navHeight}}px);'>
+  <view class="top-back">
+    <view class="mycnt">每一次经历都是美好的回忆</view>
+  </view>
+  <view class="main">
+    <view class="inner">
+      <view class="company" wx:for="{{companyList}}" wx:key="index">
+        <image class="logo" mode="widthFix" src="../../../images/company/{{item.image}}" />
+        <view class="info-part">
+          <view class="name">{{item.name}}</view>
+          <view class="job">{{item.job}}</view>
+          <view class="time">{{item.time}}</view>
+          <view class="cominfo {{index != companyList.length-1 ? 'scale-1px-bottom' : ''}}">{{item.cominfo}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

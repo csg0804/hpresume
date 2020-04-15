@@ -1,0 +1,65 @@
+// out: myinfo.wxss, compress
+.myinfo-wrap{
+  display: flex;
+  flex-direction: column;
+  background: #3dcaff;
+  overflow: auto;
+  .photo-box{
+    width: 686rpx;
+    height: 580rpx;
+    margin: 20rpx auto 0;
+    border-radius: 15rpx;
+    overflow: hidden;
+    .myphoto{
+      display: block;
+      width: 100%;
+    }
+  }
+  .cnt{
+    flex: 1;
+    width: 686rpx;
+    background: #fff;
+    margin:  30rpx auto;
+    border-radius: 15rpx;
+    overflow: auto;
+  }
+  .name{
+    color: #333;
+    font-size: 60rpx;
+    font-weight: 700;
+    margin: 40rpx 0 30rpx;
+    padding-left: 30rpx;
+    border-left: 10rpx solid #333;
+  }
+  .base{
+    padding: 0 0 30rpx 45rpx;
+    box-sizing: border-box;
+    .title{
+      font-size: 32rpx;
+      color: #333;
+      line-height: 50rpx;
+      margin-bottom: 10rpx;
+      .iconfont{
+        color: #333;
+      }
+    }
+    .info-item{
+      font-size: 28rpx;
+      color: #333;
+      line-height: 36rpx;
+      padding: 0 25rpx 0 35rpx;
+      overflow: hidden;
+      .inname{
+        float: left;
+        width: 90rpx;
+      }
+      .val{
+        float: left;
+        width: 450rpx;
+      }
+      .phone{
+        color: #3dcaff;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<com-navbar navData="{{navData}}" ></com-navbar>
+<view class="my-wrap" style='height: calc(100% - {{navHeight}}px);'>
+  <view class="top-back"></view>
+  <view class="user-part">
+    <image class="photos" mode="widthFix" src="../../images/myphoto.jpg" />
+    <view class="user-info">
+      <view class="user-name">陈松国</view>
+      <view class="user-phone">18665389269</view>
+      <view class="year">4年前端工作经验 | 涉及多端 | 严谨好学</view>
+    </view>
+  </view>
+
+  <view class="menues">
+    <view class="menue-item" data-menu="1" bindtap="toconcernFun">
+      <view class="icons iconfont icongerenxinxi"></view>
+      <view class="menue-name">个人信息</view>
+      <view class="right-arrow iconfont iconnext"></view>
+    </view>
+    <view class="menue-item" data-menu="2" bindtap="toconcernFun">
+      <view class="icons iconfont icongongwenbao1"></view>
+      <view class="menue-name">工作经历</view>
+      <view class="right-arrow iconfont iconnext"></view>
+    </view>
+    <view class="menue-item" data-menu="3" bindtap="toconcernFun">
+      <view class="icons iconfont iconxiangmu"></view>
+      <view class="menue-name">我的项目</view>
+      <view class="right-arrow iconfont iconnext"></view>
+    </view>
+    <button class="contact-btn menue-item" open-type="contact" bindcontact="handleContact">
+      <view class="icons iconfont iconkefu"></view>
+      <view class="menue-name">给我留言</view>
+      <view class="right-arrow iconfont iconnext"></view>
+    </button>
+  </view>
+</view>

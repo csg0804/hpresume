@@ -1,0 +1,51 @@
+<com-navbar navData="{{navData}}" ></com-navbar>
+<view class="works-wrap" style='height: calc(100% - {{navHeight}}px);'>
+  <view class="search-part">
+    <picker class="drop-picker" value="{{curdrop}}" range="{{dropList}}" bindchange="bindPickerChange" >
+      <view class="picker-box scale-1px-right">
+        <view class="picker-val {{curdrop==0 ? 'gray' : ''}}">{{dropList[curdrop]}}</view>
+        <view class="iconfont icondownArrow"></view>
+      </view>
+    </picker>
+    <view class="search-box">
+      <view class="iconfont iconsearch"></view>
+      <input class="search-input" value="{{cursearch}}" hold-keyboard="true" bindinput="bindinput" placeholder-class="input-pla" placeholder="请输入项目名称查询" />
+      <view class="close iconfont iconorder-close {{cursearch ? '' : 'hideclose'}}" bindtap="closeInput"></view>
+    </view>
+  </view>
+  <view class="works-list {{!worksList.length?'nodata':''}}">
+    <block wx:if="{{worksList.length}}">
+      <view class="works-item" wx:for="{{worksList}}" wx:key="index">
+
+        <view class="title-box scale-1px-bottom" wx:if="{{item.type != 1 || !item.appid}}">
+          <image class="logo" mode="widthFix" src="../../images/works/{{item.logo}}" />
+          <view class="title">{{item.name}}</view>
+          <view class="label {{item.type==1?'blue':(item.type==2?'green':(item.type==3?'pink':'origin'))}}">{{typeObj[item.type]}}</view>
+        </view>
+        <!-- 微信小程序跳转 -->
+        <navigator class="title-box scale-1px-bottom" wx:else target="miniProgram" open-type="navigate" app-id="{{item.appid}}" path="pages/index/index" hover-class="none" version="release">
+          <image class="logo" mode="widthFix" src="../../images/works/{{item.logo}}" />
+          <view class="title">{{item.name}}</view>
+          <view class="label {{item.type==1?'blue':(item.type==2?'green':(item.type==3?'pink':'origin'))}}">{{typeObj[item.type]}}</view>
+          <text class="link">(点击跳转)</text>
+        </navigator>
+
+        <view class="describe cnt-box">
+          <view class="dec-title cnt-title">描述:</view>
+          <view class="dec cnt scale-1px-bottom">{{item.dec}}</view>
+        </view>
+        <view class="skill cnt-box">
+          <view class="skill-title cnt-title">技术:</view>
+          <view class="skill-points cnt">
+            <view class="point-item" wx:for="{{item.skills}}" wx:for-item="e" wx:for-index="u" wx:key="i">{{e}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    
+    <view class="empty" wx:else>
+      <image class="empty-img" mode="widthFix" src="../../images/empty.png" />
+      <view class="empty-cnt">暂无数据</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,64 @@
+.myinfo-wrap {
+  display: flex;
+  flex-direction: column;
+  background: #3dcaff;
+  overflow: auto;
+}
+.myinfo-wrap .photo-box {
+  width: 686rpx;
+  height: 580rpx;
+  margin: 20rpx auto 0;
+  border-radius: 15rpx;
+  overflow: hidden;
+}
+.myinfo-wrap .photo-box .myphoto {
+  display: block;
+  width: 100%;
+}
+.myinfo-wrap .cnt {
+  flex: 1;
+  width: 686rpx;
+  background: #fff;
+  margin: 30rpx auto;
+  border-radius: 15rpx;
+  overflow: auto;
+}
+.myinfo-wrap .name {
+  color: #333;
+  font-size: 60rpx;
+  font-weight: 700;
+  margin: 40rpx 0 30rpx;
+  padding-left: 30rpx;
+  border-left: 10rpx solid #333;
+}
+.myinfo-wrap .base {
+  padding: 0 0 30rpx 45rpx;
+  box-sizing: border-box;
+}
+.myinfo-wrap .base .title {
+  font-size: 32rpx;
+  color: #333;
+  line-height: 50rpx;
+  margin-bottom: 10rpx;
+}
+.myinfo-wrap .base .title .iconfont {
+  color: #333;
+}
+.myinfo-wrap .base .info-item {
+  font-size: 28rpx;
+  color: #333;
+  line-height: 36rpx;
+  padding: 0 25rpx 0 35rpx;
+  overflow: hidden;
+}
+.myinfo-wrap .base .info-item .inname {
+  float: left;
+  width: 90rpx;
+}
+.myinfo-wrap .base .info-item .val {
+  float: left;
+  width: 450rpx;
+}
+.myinfo-wrap .base .info-item .phone {
+  color: #3dcaff;
+}

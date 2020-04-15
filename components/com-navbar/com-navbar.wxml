@@ -1,0 +1,7 @@
+<view class="com-navbar-wrap" style='height: {{navHeight}}px; padding-top: {{navTop}}px; background: {{!propIsBackImg && propBack ? propBack : "#fff"}}'>
+  <image class="backimgs" mode="widthFix" wx:if="{{propIsBackImg}}" src="{{propBack}}" style='height: {{navHeight}}px;' />
+  <view class="main" style="height: {{contentHeight}}px;">
+    <view class="menuebtn ishome iconfont {{propHome ? 'iconmenu' : isTab ? '' : (showToHome ? 'iconhome2' : 'iconlujing')}}" style="color:{{propIconColor}}" bindtap="topbtnFun"></view>
+    <view class="title" style="font-size: {{defaultFont}}px; color:{{propTitleColor}}">{{propTitle}}</view>
+  </view>
+</view>

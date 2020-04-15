@@ -1,0 +1,56 @@
+<com-navbar navData="{{navData}}" ></com-navbar>
+<view class="myinfo-wrap" style='height: calc(100% - {{navHeight}}px);'>
+  <view class="photo-box">
+    <image class="myphoto" mode="widthFix" src="../../../images/myphoto.jpg" />
+  </view>
+  <view class="cnt">
+    <view class="name">陈松国</view>
+    <view class="base">
+      <view class="title scale-1px-bottom">
+        <text class="iconfont iconxinxi"></text> 
+        基本信息
+      </view>
+      <view class="info-item">
+        <view class="inname">性别：</view>
+        <view class="val">男</view>
+      </view>
+      <view class="info-item">
+        <view class="inname">学历：</view>
+        <view class="val">全日制本科</view>
+      </view>
+      <view class="info-item">
+        <view class="inname">手机：</view>
+        <view class="val phone" bindtap="makeCallFun">18665389269 (呼叫我)</view>
+      </view>
+    </view>
+    <view class="base">
+      <view class="title scale-1px-bottom">
+        <text class="iconfont iconjiaoyu"></text> 
+        教育经历
+      </view>
+      <!-- <view class="title scale-1px-bottom">⦿ 教育经历</view> -->
+      <view class="info-item">
+        <view class="inname">学校：</view>
+        <view class="val">湖南科技大学</view>
+      </view>
+      <view class="info-item">
+        <view class="inname">专业：</view>
+        <view class="val">工业设计</view>
+      </view>
+      <view class="info-item">
+        <view class="inname">时间：</view>
+        <view class="val">2009.06</view>
+      </view>
+    </view>
+    <view class="base">
+      <view class="title scale-1px-bottom">
+        <text class="iconfont icondianzan1"></text> 
+        个人优势
+      </view>
+      <view class="info-item">
+        <view class="inname">简介：</view>
+        <view class="val">能使用Vue及小程序实现多端开发。责任心强，工作勤奋，代码洁癖，爱好学习。</view>
+      </view>
+    </view>
+  </view>
+</view>

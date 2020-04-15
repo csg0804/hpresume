@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#FA5573",
+  "navigationBarTextStyle": "white",
+  "disableScroll": true,
+  "usingComponents": {
+    "com-navbar": "../../components/com-navbar/com-navbar",
+    "com-circle": "../../components/com-circle/com-circle"
+  }
+}
